@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{background-color: aquamarine;height: 120px;}
+        #footer{background-color:rgb(107, 95, 160);}
+        #contand{height: 300px;vertical-align: top;}
+    </style>
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <td id="header">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+             <a href="/newa">صفحه اصلی</a>
+             <a href="/contact">ارتباط با ما</a>
+
+            </td>
+        </tr>
+        <tr>
+            <td  id="contand">
+              {% for item in news %}
+                <a href="{{item.id}}"> {{item.title}} </a> <br/>
+               
+              {%endfor%}
+            </td>
+        </tr>
+        <tr>
+            <td id="footer">
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
